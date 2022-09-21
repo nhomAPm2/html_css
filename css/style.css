@@ -1,0 +1,273 @@
+
+/* 19/09/2022 by Hai */
+
+*{
+    padding:0;margin: 0;box-sizing: border-box;
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+/* //begin intro */
+.intro{
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    animation: bienmat 2s ease-in-out 4s forwards;
+    position: relative;
+    z-index: 999999;
+}
+.intro.hide_intro{
+    display: none!important;
+}
+svg{
+    width: 80vw;
+    margin: auto;
+    display: block;
+    margin-top: 50vh;
+    transform:translateY(-60%);
+}
+#Group_3{
+    opacity: 0;
+    animation: anhien 1s ease-in-out 1s forwards;
+}
+#Group_4 #Vector_2{
+    animation: dilen 1s ease-in-out 2s forwards;
+    opacity: 0;
+    transition: 0.5s; 
+}
+#Group_4 #Vector_3{
+    animation: dilen 1s ease-in-out 2.2s forwards;
+    opacity: 0;
+    transition: 0.5s; 
+}
+#Group_4 #Vector_4{
+    animation: dilen 1s ease-in-out 2.4s forwards;
+    opacity: 0;
+    transition: 0.5s; 
+}
+#Group_4 #Vector_5{
+    animation: dilen 1s ease-in-out 2.6s forwards;
+    opacity: 0;
+    transition: 0.5s; 
+}
+#Group_4 #Vector_6{
+    animation: dilen 1s ease-in-out 2.8s forwards;
+    opacity: 0;
+    transition: 0.5s; 
+}
+#Group_5{
+    animation: disang 1s ease-in-out 3.2s forwards;
+    opacity: 0;
+}
+/* //animation  */
+@keyframes anhien {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes dilen {
+    0%{
+        opacity: 0;
+        transform: translateY(10vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vw);
+    }
+}
+@keyframes disang {
+    0%{
+        opacity: 0;
+        transform: translateX(-10vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vw);
+    }
+}
+@keyframes bienmat {
+    0%{
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* //end intro */
+/* /// noi dung  */
+.noidung{
+    display: flex;
+}
+.left{
+    width: 20vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.158);
+    animation: leftd 2s ease-in-out 6.2s forwards;
+}
+@keyframes leftd {
+    0%{transform: translateX(-100%);}
+    100%{transform: translateX(0%);}
+}
+.left .avatar{
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.left .k1,i{
+    width: 15vw;
+    height: 15vw;
+    position: relative;
+    border: 1px solid white;
+    margin-top:1vw;
+    margin: 10px auto;
+    overflow: hidden;
+    
+}
+.left .k1:nth-child(1){
+    margin-top:0vw;
+}
+.left .k1 a{
+    overflow: hidden;
+    text-decoration: none;
+    
+   
+}
+.left .k1 a img{
+    width: 100%;
+    
+}
+.left .k1 a span{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.514);
+    padding: 5px 0px ;
+    color: white;
+    font-weight: 400;
+    transform: translateY(10vw);
+    transition: 0.5s;
+}
+.left .k1 a:hover span{
+    transform: translateY(0vw);
+}
+
+
+
+/* ///right  */
+.right{
+    width: 80vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    animation: rightd 2s ease-in-out 6.2s forwards;
+}
+@keyframes rightd {
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(0%);}
+}
+.logo{
+    width: 40vw;
+    margin: auto;
+}
+.logo img{
+    width: 100%;
+    margin: auto;
+}
+h1{
+    width: 60vw;
+    text-transform:uppercase;
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    color:#3b3b3b ;
+    font-size: 2rem;
+}
+p{
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(173, 173, 173);
+    margin: auto;
+}
+.eficon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+.eficon .icon{
+    width: 6vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.eficon .icon{
+    font-size: 5vw;
+}
+.eficon .icon i{
+    transform: translateX(3vw);
+    border: none;
+    color: #9c8164;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+.eficon .icon i.active{
+    opacity: 1;
+    transform: translateX(1vw);
+}
+.animation{
+    margin: auto;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+}
+.animation .d1{
+    width: 3vw;
+    height: 3vw;
+    background-color: #029fe5;
+    animation: dichuyen 20s ease-in-out infinite;
+}
+.animation .d2{
+    width: 3vw;
+    height: 3vw;
+    background-color: #ff76a0;
+    animation: dichuyen 25s ease-in-out  infinite;
+}
+.animation .d3{
+    width: 3vw;
+    height: 3vw;
+    background-color: #429f3b;
+    animation: dichuyen 23s ease-in-out  infinite;
+}
+@keyframes dichuyen {
+    0%{margin-left: 0vw;}
+    50%{margin-left: 70vw;}
+}
+.footer{
+    width: 100%;
+    text-align: right;
+    color: aliceblue;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px 10px;
+    text-transform:uppercase;
+    background-color: rgba(0, 0, 0, 0.514);
+    font-family: 'Raleway', sans-serif;
+}
